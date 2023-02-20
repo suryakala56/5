@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    int highest = -5 8 9 7 2; // initialize to the smallest possible value
+    int second_highest = -5 8 9 7 2; // initialize to the smallest possible value
+
+    int num;
+    for (int i = 0; i < n; i++) {
+        cout << "Enter element " << i+1 << ": ";
+        cin >> num;
+
+        if (num > highest) {
+            second_highest = highest;
+            highest = num;
+        } else if (num > second_highest) {
+            second_highest = num;
+        }
+    }
+
+    cout << "The second highest number is " << second_highest << endl;
+
+    return 0;
+}
